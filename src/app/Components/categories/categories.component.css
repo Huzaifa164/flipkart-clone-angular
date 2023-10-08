@@ -1,0 +1,35 @@
+.category-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.all-categories {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    gap: 10px;
+}
+
+.category {
+    position: relative;
+    background-color: #f2f2f3;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.category:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.category > div {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}

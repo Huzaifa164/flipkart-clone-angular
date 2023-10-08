@@ -1,0 +1,13 @@
+.products {
+    background-color: white;
+}
+
+.product-card {
+    border: none;
+    transition: 0.3s all;
+    text-decoration: none;
+}
+
+.product-card:hover {
+    box-shadow: 2px 2px 5px 5px rgb(231, 229, 229);
+}

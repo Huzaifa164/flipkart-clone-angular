@@ -1,0 +1,34 @@
+<section class="products mt-3 p-4">
+  <h3 class="mb-3">Products</h3>
+  <div
+    class="row row-cols-2 row-cols-md-4 row-cols-sm-3 row-cols-lg-6 g-4"
+    *ngIf="isProductAvailable; else elseBlock"
+  >
+    <div class="col product" *ngFor="let product of products">
+      <a
+        [routerLink]="['/product', product.id]"
+        class="card h-100 product-card"
+      >
+        <img
+          src="{{ product.images[0] }}"
+          class="card-img-top"
+          alt="{{ product.title }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ product.title }}</h5>
+          <div class="product-rating">
+            <div>
+              {{ product.rating }}
+              <i class="fa-solid fa-star rating-star"></i>
+            </div>
+          </div>
+          <div class="product-price mt-2 fw-bold">${{ product.price }}</div>
+          <div class="product-discount text-success">
+            <span class="fw-bold">{{ product.discountPercentage }}%</span> off
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <ng-template #elseBlock><h5 class="text-center d-flex justify-content-center align-items-center" style="height: 50vh;">No Products Available</h5> </ng-template>
+</section>

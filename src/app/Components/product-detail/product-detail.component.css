@@ -1,0 +1,10 @@
+@media(max-width: 800px) {
+    .details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details img {
+        width: 80%;
+    }
+}

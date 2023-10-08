@@ -1,0 +1,30 @@
+<section class="details bg-white mt-3 p-5 d-flex" style="gap: 20px; min-height: 70vh;">
+  <div class="details-left">
+    <img src="{{ product.images[0] }}" alt="{{ product.title }}" />
+  </div>
+  <div class="details-right">
+    <h4 class="details-title">{{ product.title }}</h4>
+    <div class="product-rating">
+      <div>
+        {{ product.rating }}
+        <i class="fa-solid fa-star rating-star"></i>
+      </div>
+    </div>
+    <div class="price-details d-flex align-items-center mt-2" style="gap: 10px">
+      <h4 class="product-price">${{ product.price }}</h4>
+      <div class="product-discount text-success">
+        <span class="fw-bold">{{ product.discountPercentage }}%</span> off
+      </div>
+    </div>
+    <p><span class="fw-bold mt-3">Description: </span>{{product.description}}</p>
+    <p><span class="fw-bold mt-3">Stock: </span>{{product.stock}}</p>
+    <p><span class="fw-bold mt-3">Brand: </span>{{product.brand}}</p>
+    <p><span class="fw-bold mt-3">Category: </span>{{product.category}}</p>
+    <div class="add-cart-button">
+        <a routerLink="/checkout" class="btn btn-primary" style="background-color: #fb641b; border: none;">
+            <i class="fa-solid fa-bolt"></i>
+            Buy Now
+        </a>
+    </div>
+  </div>
+</section>
